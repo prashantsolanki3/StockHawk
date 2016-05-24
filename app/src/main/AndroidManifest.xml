@@ -6,6 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".App"
         android:theme="@style/AppTheme" >
 
         <uses-permission android:name="android.permission.INTERNET" />
@@ -39,6 +40,10 @@
             android:authorities="com.sam_chordas.android.stockhawk.data.QuoteProvider"
             android:name="com.sam_chordas.android.stockhawk.data.generated.QuoteProvider"
             android:exported="false"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4b209ea46dc9383f425f18682c4186212f23e330" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
