@@ -13,7 +13,7 @@ apply plugin: 'android-apt'
 
 android {
   compileSdkVersion 23
-  buildToolsVersion "23.0.1"
+  buildToolsVersion "23.0.3"
 
   defaultConfig {
     applicationId "com.example.sam_chordas.stockhawk"
@@ -29,14 +29,14 @@ android {
     }
   }
 }
-ext {
-    support_library_version = "23.4.0"
-    gms_library_version = "9.0.0"
-}
 
 repositories {
   maven { url "https://jitpack.io" }
     maven { url 'https://maven.fabric.io/public' }
+}
+ext {
+  support_library_version = "23.4.0"
+  gms_library_version = "9.0.0"
 }
 
 dependencies {
@@ -47,10 +47,10 @@ dependencies {
   compile 'net.simonvt.schematic:schematic:0.6.3'
   compile 'com.melnykov:floatingactionbutton:1.2.0'
   compile "com.android.support:design:$support_library_version"
-
-  compile('com.github.afollestad.material-dialogs:core:0.8.5.7@aar') {
+  compile('com.afollestad.material-dialogs:core:0.8.4.2@aar') {
     transitive = true
   }
+    compile 'com.diogobernardino:williamchart:2.2'
     compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
         transitive = true;
     }
