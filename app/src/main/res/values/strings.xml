@@ -12,19 +12,20 @@
     <string name="widget_title" translatable="false">Today\'s Market</string>
     <string name="network_toast" translatable="false">Uh-oh! This app requires an internet connection</string>
     <string name="network_error" translatable="false">Due to unavailability of internet, list may be empty or out of date.</string>
-    <string name="title_activity_stock_detail" translatable="false">StockDetailActivity</string>
+    <string name="title_activity_stock_detail">Stock Details</string>
 
     <!-- Content Descriptions -->
-    <string name="content_description_add_stock" translatable="false">Add a stock item</string>
+    <string name="content_description_add_stock">Add a stock item</string>
 
     <integer name="snackbar_duration">10000</integer>
     <string name="string_tag"  translatable="false">tag</string>
+    <string name="string_already_exist">Stock Already Exist</string>
     <string name="string_add"  translatable="false">add</string>
     <string name="string_symbol"  translatable="false">symbol</string>
     <string name="string_periodic"  translatable="false">periodic</string>
     <string name="string_init"  translatable="false">init</string>
-    <string name="error_no_symbol"  translatable="false">Error! symbol Not found</string>
-    <string name="string_symbol_found" translatable="false">Success! added new Symbol</string>
-    <string name="string_stock_saved" translatable="false">This stock is already saved!</string>
+    <string name="error_no_symbol"  >Error! Stock Not found</string>
+    <string name="string_symbol_found" >Success! New Stock Added</string>
+    <string name="string_stock_saved" >This stock is already saved!</string>
     <string name="string_set_background_resource" translatable="false">setBackgroundResource</string>
 </resources>

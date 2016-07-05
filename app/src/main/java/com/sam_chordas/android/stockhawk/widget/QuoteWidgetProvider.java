@@ -38,7 +38,9 @@ public class QuoteWidgetProvider extends AppWidgetProvider {
                     .addNextIntentWithParentStack(clickIntentTemplate)
                     .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
             views.setPendingIntentTemplate(R.id.widget_list, clickPendingIntentTemplate);
+
             appWidgetManager.updateAppWidget(appWidgetId, views);
+
         }
     }
 
@@ -64,5 +66,10 @@ public class QuoteWidgetProvider extends AppWidgetProvider {
     private void setRemoteAdapterV11(Context context, @NonNull final RemoteViews views) {
         views.setRemoteAdapter(0, R.id.widget_list,
                 new Intent(context, QuoteWidgetRemoteViewsService.class));
+    }
+
+
+    private void setupChart(){
+
     }
 }

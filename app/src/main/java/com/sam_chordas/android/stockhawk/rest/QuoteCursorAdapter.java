@@ -54,27 +54,28 @@ public class QuoteCursorAdapter extends CursorRecyclerViewAdapter<QuoteCursorAda
       if (sdk < Build.VERSION_CODES.JELLY_BEAN){
         viewHolder.change.setBackgroundDrawable(
             mContext.getResources().getDrawable(R.drawable.percent_change_pill_green));
-      }else {
+      } else {
         viewHolder.change.setBackground(
             mContext.getResources().getDrawable(R.drawable.percent_change_pill_green));
       }
-    } else{
+    } else {
       if (sdk < Build.VERSION_CODES.JELLY_BEAN) {
         viewHolder.change.setBackgroundDrawable(
             mContext.getResources().getDrawable(R.drawable.percent_change_pill_red));
-      } else{
+      } else {
         viewHolder.change.setBackground(
             mContext.getResources().getDrawable(R.drawable.percent_change_pill_red));
       }
     }
     if (Utils.showPercent){
       viewHolder.change.setText(cursor.getString(cursor.getColumnIndex(QuoteColumns.PERCENT_CHANGE)));
-    } else{
+    } else {
       viewHolder.change.setText(cursor.getString(cursor.getColumnIndex(QuoteColumns.CHANGE)));
     }
   }
 
-  @Override public void onItemDismiss(int position) {
+  @Override
+  public void onItemDismiss(int position) {
     Cursor c = getCursor();
     c.moveToPosition(position);
     String symbol = c.getString(c.getColumnIndex(QuoteColumns.SYMBOL));
@@ -82,7 +83,8 @@ public class QuoteCursorAdapter extends CursorRecyclerViewAdapter<QuoteCursorAda
     notifyItemRemoved(position);
   }
 
-  @Override public int getItemCount() {
+  @Override
+  public int getItemCount() {
     return super.getItemCount();
   }
 

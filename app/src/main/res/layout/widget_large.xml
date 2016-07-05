@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:paddingRight="10dp"
             android:paddingEnd="10dp"
-            tools:text="1000.00"
+            tools:text="600.00"
             />
         <TextView
             android:id="@+id/change"

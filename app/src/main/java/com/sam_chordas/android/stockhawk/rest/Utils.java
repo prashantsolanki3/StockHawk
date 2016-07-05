@@ -1,6 +1,7 @@
 package com.sam_chordas.android.stockhawk.rest;
 
 import android.content.ContentProviderOperation;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.sam_chordas.android.stockhawk.data.QuoteColumns;
@@ -61,8 +62,11 @@ public class Utils {
     return batchOperations;
   }
 
-  public static String truncateBidPrice(String bidPrice){
+  public static String truncateBidPrice(@NonNull String bidPrice){
+    if(bidPrice!=null||!bidPrice.equalsIgnoreCase("null"))
     bidPrice = String.format("%.2f", Float.parseFloat(bidPrice));
+    else
+      return "0.0";
     return bidPrice;
   }
 
